@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/marmorizado"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/viewCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:background="@drawable/view_cadastro"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="16dp"
+        />
+
+    <TextView
+        android:id="@+id/textCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/hedvig_letters_sans"
+        android:text="Cadastro"
+        android:textColor="@color/lightpink"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/viewCadastro"
+        app:layout_constraintStart_toStartOf="@id/viewCadastro"
+        app:layout_constraintTop_toTopOf="@id/viewCadastro" />
+
+
+    <EditText
+        android:id="@+id/inputNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome Completo"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:inputType="text"
+        android:background="@drawable/rounded_input"
+        app:layout_constraintTop_toBottomOf="@id/textCadastro"
+        app:layout_constraintStart_toStartOf="@id/viewCadastro"
+        app:layout_constraintEnd_toEndOf="@id/viewCadastro"/>
+
+    <EditText
+        android:id="@+id/inputTelefone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Telefone"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="7dp"
+        android:padding="10dp"
+        android:inputType="text"
+        android:background="@drawable/rounded_input"
+        app:layout_constraintTop_toBottomOf="@id/inputNome"
+        app:layout_constraintStart_toStartOf="@id/viewCadastro"
+        app:layout_constraintEnd_toEndOf="@id/viewCadastro"/>
+
+    <EditText
+        android:id="@+id/inputEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="E-mail"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="7dp"
+        android:padding="10dp"
+        android:inputType="text"
+        android:background="@drawable/rounded_input"
+        app:layout_constraintTop_toBottomOf="@id/inputTelefone"
+        app:layout_constraintStart_toStartOf="@id/viewCadastro"
+        app:layout_constraintEnd_toEndOf="@id/viewCadastro"/>
+
+    <CheckBox
+        android:id="@+id/chckListaEmails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingressar na lista de e-mails?"
+        android:fontFamily="@font/hedvig_letters_sans"
+        android:textColor="@color/grey"
+        android:buttonTint="@color/grey"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="7dp"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/inputEmail"
+        app:layout_constraintStart_toStartOf="@id/viewCadastro"
+        app:layout_constraintEnd_toEndOf="@id/viewCadastro"/>
+
+    <TextView
+        android:id="@+id/txtSexo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sexo"
+        android:fontFamily="@font/hedvig_letters_sans"
+        android:textSize="15sp"
+        android:textColor="@color/grey"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintTop_toBottomOf="@id/chckListaEmails"
+        app:layout_constraintStart_toStartOf="@id/viewCadastro"/>
+
+    <RadioGroup
+        android:id="@+id/rdGroupSexo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="40dp"
+        app:layout_constraintTop_toBottomOf="@id/txtSexo"
+        app:layout_constraintStart_toStartOf="@id/viewCadastro"
+        app:layout_constraintEnd_toEndOf="@id/viewCadastro">
+
+        <RadioButton
+            android:id="@+id/radioFem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Feminino"
+            android:textSize="15sp"
+            android:textColor="@color/grey"
+            app:buttonTint="@color/grey"
+            />
+
+        <RadioButton
+            android:id="@+id/radioMasc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masculino"
+            android:textSize="15sp"
+            android:textColor="@color/grey"
+            app:buttonTint="@color/grey"
+            />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/inputCidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cidade"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="7dp"
+        android:padding="10dp"
+        android:inputType="text"
+        android:background="@drawable/rounded_input"
+        app:layout_constraintTop_toBottomOf="@id/rdGroupSexo"
+        app:layout_constraintStart_toStartOf="@id/viewCadastro"
+        app:layout_constraintEnd_toEndOf="@id/viewCadastro"/>
+
+    <TextView
+        android:id="@+id/txtUf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UF"
+        android:fontFamily="@font/hedvig_letters_sans"
+        android:textSize="17sp"
+        android:textColor="@color/grey"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/inputCidade"
+        app:layout_constraintStart_toStartOf="@id/viewCadastro"/>
+
+    <Spinner
+        android:id="@+id/spinnerUf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="7dp"
+        android:padding="10dp"
+        android:background="@drawable/rounded_input"
+        app:layout_constraintTop_toBottomOf="@id/txtUf"
+        app:layout_constraintStart_toStartOf="@id/viewCadastro"
+        app:layout_constraintEnd_toEndOf="@id/viewCadastro"/>
+
+    <Button
+        android:id="@+id/btnLimpar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Limpar"
+        android:layout_marginTop="10dp"
+        android:translationZ="9dp"
+        android:layout_marginStart="40dp"
+        android:fontFamily="@font/hedvig_letters_sans"
+        android:textSize="20sp"
+        android:backgroundTint="@color/lightpink"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/spinnerUf"
+        app:layout_constraintStart_toStartOf="@id/viewCadastro"
+        app:layout_constraintBottom_toBottomOf="@id/viewCadastro"
+        />
+
+    <Button
+        android:id="@+id/btnSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Salvar "
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:translationZ="9dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/hedvig_letters_sans"
+        android:backgroundTint="@color/lightpink"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/spinnerUf"
+        app:layout_constraintEnd_toEndOf="@id/viewCadastro"
+        app:layout_constraintBottom_toBottomOf="@id/viewCadastro"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
